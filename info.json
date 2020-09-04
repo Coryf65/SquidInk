@@ -1,0 +1,10 @@
+{
+  "name": "SquidInk",
+  "version": "1.0.1",
+  "title": "Squid Ink",
+  "author": "Cory F",
+  "homepage": "https://github.com/Coryf65/SquidInk_1.0.1",
+  "factorio_version": "1.00",
+  "dependencies": ["base >= 1.00"],
+  "description": "This mod adds a collection of Furnaces and Uranium Processing."
+}
