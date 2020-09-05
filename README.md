@@ -8,7 +8,7 @@ A Mod for Factorio
 
 1. Squid Plates - Metal plates Iron + Steel + Squid Ink
 
-2. Squid Furnance - a better electric furnance
+2. Squid Furnace - a better electric furnace
 
 3. Uranium Processor - Creates Uranium 235 from 238 and Squid Ink
 
@@ -22,7 +22,7 @@ A Mod for Factorio
 
 2. Squid Cooking
 
-  - Squid Furnance
+  - Squid Furnace
   
 3. Squid GlowInk
 
