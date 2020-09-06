@@ -2,7 +2,7 @@
 
 squidFurnace = util.table.deepcopy(data.raw["furnace"]["electric-furnace"])
 squidFurnace.name = "squid-furnace"
-squidFurnace.icon = "__SquidInk__/graphics/icons/squid-furnace.png"
+squidFurnace.icon = "__SquidInk__/graphics/squid-furnace-icon.png"
 squidFurnace.minable.result = "squid-furnace"
 squidFurnace.fast_replaceable_group = "furnace"
 squidFurnace.module_specification.module_slots = 6
@@ -11,14 +11,14 @@ squidFurnace.crafting_speed = 5
 squidFurnace.animation.layers =
 {
   {
-    filename = "__SquidInk__/graphics/entity/squid-furnace/squid-furnace.png",
+    filename = "__SquidInk__/graphics/squid-furnace.png",
     priority = "high",
     width = 129,
     height = 100,
     frame_count = 1,
     shift = {0.421875, 0},
     hr_version = {
-      filename = "__SquidInk__/graphics/entity/squid-furnace/squid-furnace.png",
+      filename = "__SquidInk__/graphics/squid-furnace.png",
       priority = "high",
       width = 239,
       height = 219,
@@ -54,21 +54,9 @@ data:extend(
   squidFurnace,
 
   {
-    type = "item",
-    name = "squid-furnace2",
-    icon = "__SquidInk__/graphics/icons/squid-furnace.png",
-    icon_size = 64, icon_mipmaps = 4,
-    subgroup = "smelting-machine",
-    order = "z[electric-furnace]b",
-    place_result = "squid-furnace",
-    stack_size = 50
-  },
-
-  {
     type = "recipe",
     name = "squid-furnace",
     ingredients = {
-        {"squid-plate", 40},
         {"steel-plate", 10},
         {"electric-furnace", 1}
     },

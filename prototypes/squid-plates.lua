@@ -9,7 +9,6 @@ sqiudPlates.icons= {
     tint={r=0.5,g=0,b=1,a=0}
   },
 }
-squidPlates.subgroup = "squid-ink"
 
 
 local recipe = table.deepcopy(data.raw["recipe"]["iron-plate"])
