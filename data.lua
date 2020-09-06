@@ -3,4 +3,5 @@
 
 -- This is the name of our "item.lua" file
 --require("item")
-require("squid-plates")
+require("prototypes.squid-plates")
+require("prototypes.squid-furnace")
