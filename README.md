@@ -2,6 +2,8 @@
 
 A Mod for Factorio
 
+Made for fun to use with my friends. A Furnace, and a Centrifuge
+
 ## Some helpful Docs
 
 - Console Commands
