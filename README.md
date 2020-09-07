@@ -17,7 +17,7 @@ A Mod for Factorio
 [ReikaKalseki's Fast Furnaces](https://github.com/ReikaKalseki/FastFurnaces)
 
 - Base Game for examples, in your game install
-C:\Program Files (x86)\Steam\steamapps\common\Factorio\data\base
+`C:\Program Files (x86)\Steam\steamapps\common\Factorio\data\base`
 
 
 ## The Plan
