@@ -30,9 +30,9 @@ C:\Program Files (x86)\Steam\steamapps\common\Factorio\data\base
 
 3. Uranium Processor - Creates Uranium 235 from 238 and Squid Ink
 
-4. Squid Squeezer - Collects Squid Ink from fish
+4. Squid Squeezer - Collects Squid Ink from fish -> WIP
 
-### Research Path
+### Research Path ... ideas
 
 1. Squid Ink
 
