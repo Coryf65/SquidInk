@@ -48,10 +48,40 @@ squidFurnace.animation.layers =
   }
 }
 
+-- Squid-Tech for recipe unlocks
+squidTech = util.table.deepcopy(data.raw["technology"]["advanced-material-processing-2"])
+squidTech.name = "squid-tech"
+squidTech.effects = {{ type = "unlock-recipe", recipe = "squid-furnace"}}
+squidTech.prerequisites = {"advanced-material-processing-2", "effectivity-module", "production-science-pack"}
+squidTech.unit =
+{
+  count = 300,
+  ingredients =
+  {
+    {"automation-science-pack", 1},
+    {"logistic-science-pack", 1},
+    {"chemical-science-pack", 1},
+    {"production-science-pack", 1}
+  },
+  time = 30
+}
+squidTech.order = "c-c-b-a"
 
+-- Add into game
 data:extend(
 {
   squidFurnace,
+
+  {
+    type = "item",
+    name = "squid-furnace",
+    icon = "__SquidInk__/graphics/squid-furnace-icon.png",
+    icon_size = 64, icon_mipmaps = 4,
+    subgroup = "smelting-machine",
+    order = "z[electric-furnace]b",
+    place_result = "squid-furnace",
+    stack_size = 50
+  },
 
   {
     type = "recipe",
@@ -63,5 +93,7 @@ data:extend(
     result = "squid-furnace",
     energy_required = 5,
     enabled = false
-  }
+  },
+
+  squidTech
 })
