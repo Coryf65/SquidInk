@@ -3,7 +3,8 @@ squidTech = util.table.deepcopy(data.raw["technology"]["advanced-material-proces
 squidTech.name = "squid-tech"
 squidTech.effects = {
     { type = "unlock-recipe", recipe = "squid-plate"},
-    { type = "unlock-recipe", recipe = "squid-furnace"} 
+    { type = "unlock-recipe", recipe = "squid-furnace"},
+    { type = "unlock-recipe", recipe = "squid-centrifuge"} 
 }
 squidTech.prerequisites = {"advanced-material-processing-2", "effectivity-module", "production-science-pack"}
 squidTech.unit =

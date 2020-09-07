@@ -8,7 +8,7 @@ data:extend({
     order = "c-d",
     inventory_order = "d",
     icon = "__SquidInk__/graphics/squid-ink.png",
-    icon_size = 64,
+    icon_size = 219,
 	},
 
   {
