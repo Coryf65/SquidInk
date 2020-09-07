@@ -51,7 +51,7 @@ squidFurnace.animation.layers =
 -- Squid-Tech for recipe unlocks
 squidTech = util.table.deepcopy(data.raw["technology"]["advanced-material-processing-2"])
 squidTech.name = "squid-tech"
-squidTech.effects = {{ type = "unlock-recipe", recipe = "squid-furnace"}}
+squidTech.effects = {{ type = "unlock-recipe", recipe = "squid-plate", recipe = "squid-furnace"}}
 squidTech.prerequisites = {"advanced-material-processing-2", "effectivity-module", "production-science-pack"}
 squidTech.unit =
 {

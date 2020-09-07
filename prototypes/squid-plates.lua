@@ -12,7 +12,7 @@ sqiudPlates.icons= {
 
 
 local recipe = table.deepcopy(data.raw["recipe"]["iron-plate"])
-recipe.enabled = true
+recipe.enabled = false
 recipe.name = "squid-plate"
 recipe.ingredients = {{"raw-fish",5},{"copper-plate",200},{"steel-plate",50}}
 recipe.result = "squid-plate"
