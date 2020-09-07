@@ -8,6 +8,8 @@ squidFurnace.fast_replaceable_group = "furnace"
 squidFurnace.module_specification.module_slots = 6
 squidFurnace.energy_usage = "190kW"
 squidFurnace.crafting_speed = 5
+squidFurnace.group = "squid-ink"
+squidFurnace.subgroup = "squid-machines"
 squidFurnace.animation.layers =
 {
   {
@@ -48,28 +50,11 @@ squidFurnace.animation.layers =
   }
 }
 
--- Squid-Tech for recipe unlocks
-squidTech = util.table.deepcopy(data.raw["technology"]["advanced-material-processing-2"])
-squidTech.name = "squid-tech"
-squidTech.effects = {{ type = "unlock-recipe", recipe = "squid-plate", recipe = "squid-furnace"}}
-squidTech.prerequisites = {"advanced-material-processing-2", "effectivity-module", "production-science-pack"}
-squidTech.unit =
-{
-  count = 300,
-  ingredients =
-  {
-    {"automation-science-pack", 1},
-    {"logistic-science-pack", 1},
-    {"chemical-science-pack", 1},
-    {"production-science-pack", 1}
-  },
-  time = 30
-}
-squidTech.order = "c-c-b-a"
+
 
 -- Add into game
-data:extend(
-{
+data:extend({
+
   squidFurnace,
 
   {
@@ -77,7 +62,8 @@ data:extend(
     name = "squid-furnace",
     icon = "__SquidInk__/graphics/icons/squid-furnace-icon.png",
     icon_size = 64, icon_mipmaps = 4,
-    group = "squid-ink",
+    group = "squid-machines",
+    subgroup = "squid-machines",
     order = "b",
     place_result = "squid-furnace",
     stack_size = 50
@@ -87,13 +73,13 @@ data:extend(
     type = "recipe",
     name = "squid-furnace",
     ingredients = {
-        {"steel-plate", 10},
-        {"electric-furnace", 1}
+      {"steel-plate", 20},
+      {"squid-plate", 10},
+      {"raw-fish", 1}
     },
     result = "squid-furnace",
     energy_required = 5,
     enabled = false
   },
 
-  squidTech
 })
