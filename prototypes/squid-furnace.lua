@@ -2,7 +2,7 @@
 
 squidFurnace = util.table.deepcopy(data.raw["furnace"]["electric-furnace"])
 squidFurnace.name = "squid-furnace"
-squidFurnace.icon = "__SquidInk__/graphics/squid-furnace-icon.png"
+squidFurnace.icon = "__SquidInk__/graphics/icons/squid-furnace-icon.png"
 squidFurnace.minable.result = "squid-furnace"
 squidFurnace.fast_replaceable_group = "furnace"
 squidFurnace.module_specification.module_slots = 6
@@ -75,7 +75,7 @@ data:extend(
   {
     type = "item",
     name = "squid-furnace",
-    icon = "__SquidInk__/graphics/squid-furnace-icon.png",
+    icon = "__SquidInk__/graphics/icons/squid-furnace-icon.png",
     icon_size = 64, icon_mipmaps = 4,
     group = "squid-ink",
     order = "b",
