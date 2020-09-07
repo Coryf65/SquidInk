@@ -2,6 +2,24 @@
 
 A Mod for Factorio
 
+## Some helpful Docs
+
+- Console Commands
+[Factorio Console Commands](https://wiki.factorio.com/Console)
+
+- API Documentation
+[Factorio API](https://lua-api.factorio.com/latest/)
+
+- Modding Guide / Tutorials
+[Factorio Modding Guide](https://wiki.factorio.com/Modding)
+
+- Other Modders for examples
+[ReikaKalseki's Fast Furnaces](https://github.com/ReikaKalseki/FastFurnaces)
+
+- Base Game for examples, in your game install
+C:\Program Files (x86)\Steam\steamapps\common\Factorio\data\base
+
+
 ## The Plan
 
 ### Items
