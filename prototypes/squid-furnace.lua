@@ -77,8 +77,8 @@ data:extend(
     name = "squid-furnace",
     icon = "__SquidInk__/graphics/squid-furnace-icon.png",
     icon_size = 64, icon_mipmaps = 4,
-    subgroup = "smelting-machine",
-    order = "z[electric-furnace]b",
+    group = "squid-ink",
+    order = "b",
     place_result = "squid-furnace",
     stack_size = 50
   },

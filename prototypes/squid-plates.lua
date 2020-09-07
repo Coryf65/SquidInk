@@ -9,6 +9,7 @@ sqiudPlates.icons= {
     tint={r=0.5,g=0,b=1,a=0}
   },
 }
+sqiudPlates.group = "squid-ink"
 
 
 local recipe = table.deepcopy(data.raw["recipe"]["iron-plate"])
@@ -17,4 +18,4 @@ recipe.name = "squid-plate"
 recipe.ingredients = {{"raw-fish",5},{"copper-plate",200},{"steel-plate",50}}
 recipe.result = "squid-plate"
 
-data:extend{squidPlates,recipe}
+data:extend{sqiudPlates,recipe}
