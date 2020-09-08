@@ -75,7 +75,7 @@ data:extend({
     ingredients = {
       {"steel-plate", 20},
       {"squid-plate", 10},
-      {"raw-fish", 1}
+      {"electric-furnace", 1}
     },
     result = "squid-furnace",
     energy_required = 5,
