@@ -12,7 +12,9 @@ Yoy can get the latest from Github or Mods.Factorio.com
 
 - Get the Mod file from []()
 
-- Get the Mod from the in-game Mod Downloader [/imagesForReadme/in_game_launcher.PNG]
+- Get the Mod from the in-game Mod Downloader 
+
+![in game mod launcher](/imagesForReadme/in_game_launcher.PNG)
 
 
 ## Current Items
