@@ -2,9 +2,42 @@
 
 A Mod for Factorio
 
-Made for fun to use with my friends. A Furnace, and a Centrifuge
+Made for fun to use with my friends.
 
-## Some helpful Docs
+## Current Items
+
+1. Squid Plates - a plate used to craft other items in this mod
+
+2. Squid Furnace - 5x Faster electric furnace with 6 module slots
+
+3. Inked Floor - Slows Enemies
+
+4. Squid Centrifuge - 5x Faster Centrifuge
+
+## Planned Items
+
+1. Uranium Recipe - Creates Uranium 235 from 238 and Squid Ink
+
+2. Squid Squeezer - Collects Squid Ink from fish Used to replace Oil
+
+3. Mark 2 Suid Furnace - more energy effcient
+
+## Current Research Path Plans
+
+1. Squid Tech
+
+  - Base items = Squid-Plates, Squid-Furnace, Squid-Centrifuge
+
+2. Squid Cooking - WIP
+
+  - Squid Furnace mark 2 - WIP
+  
+3. Ink Processing - WIP
+
+  - Fish squeezer to make oil "squid ink" - WIP
+
+
+### Some helpful Docs for others
 
 - Console Commands
 [Factorio Console Commands](https://wiki.factorio.com/Console)
@@ -22,30 +55,6 @@ Made for fun to use with my friends. A Furnace, and a Centrifuge
 - Base Game for examples, in your game install
 `C:\Program Files (x86)\Steam\steamapps\common\Factorio\data\base`
 
+#### Glossary
 
-
-## The Plan
-
-### Items
-
-1. Squid Plates - Metal plates Iron + Steel + Squid Ink
-
-2. Squid Furnace - a better electric furnace
-
-3. Uranium Processor - Creates Uranium 235 from 238 and Squid Ink
-
-4. Squid Squeezer - Collects Squid Ink from fish -> WIP
-
-### Research Path ... ideas
-
-1. Squid Ink
-
-  - Squid Squeezer and Squid Plates
-
-2. Squid Cooking
-
-  - Squid Furnace
-  
-3. Squid GlowInk
-
-  - Uranium Processor
+WIP = Work In Progress, not implemented yet
