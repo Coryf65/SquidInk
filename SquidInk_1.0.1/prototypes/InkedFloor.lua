@@ -8,6 +8,7 @@ data:extend({
     mined_sound = { filename = "__base__/sound/deconstruct-bricks.ogg" },
     collision_mask = {"ground-tile"},
     walking_speed_modifier = 0.15,
+    pollution_absorption_per_second = 0.050,
     layer = 61,
     decorative_removal_probability = 0.9,
     variants =
@@ -15,18 +16,18 @@ data:extend({
         main =
         {
             {
-                picture = "__SquidInk__/graphics/terrain/biome-floor/InkedFloor-floor1.png",
+                picture = "__SquidInk__/graphics/InkedFloors/InkedFloor-floor1.png",
                 count = 16,
                 size = 1
             },
             {
-                picture = "__SquidInk__/graphics/terrain/biome-floor/InkedFloor-floor2.png",
+                picture = "__SquidInk__/graphics/InkedFloors/InkedFloor-floor2.png",
                 count = 4,
                 size = 2
                 
             },
             {
-                picture = "__SquidInk__/graphics/terrain/biome-floor/InkedFloor-floor4.png",
+                picture = "__SquidInk__/graphics/InkedFloors/InkedFloor-floor4.png",
                 count = 4,
                 size = 4,	
             },  
@@ -34,17 +35,17 @@ data:extend({
 
         inner_corner =
         {
-            picture = "__SquidInk__/graphics/terrain/biome-floor/InkedFloor-inner-corner.png",
+            picture = "__SquidInk__/graphics/InkedFloors/InkedFloor-inner-corner.png",
             count = 6
         },
         outer_corner =
         {
-            picture = "__SquidInk__/graphics/terrain/biome-floor/InkedFloor-outer-corner.png",
+            picture = "__SquidInk__/graphics/InkedFloors/InkedFloor-outer-corner.png",
             count = 6
         },
         side =
         {
-            picture = "__SquidInk__/graphics/terrain/biome-floor/InkedFloor-side.png",
+            picture = "__SquidInk__/graphics/InkedFloors/InkedFloor-side.png",
             count = 8
         }        
     },
@@ -78,7 +79,7 @@ data:extend({
 	type = "item",
     name = "InkedFloor",
     icon = "__SquidInk__/graphics/icons/InkedFloor.png",
-    flags = {"goes-to-main-inventory"},
+    icon_size = 32,
     group = "squid-ink",
     subgroup = "squid-items",
     order = "c[InkedFloor]",
@@ -131,5 +132,6 @@ data:extend({
         },
     }
 
+},
 
 })
