@@ -4,6 +4,17 @@ A Mod for Factorio
 
 Made for fun to use with my friends.
 
+## How To Use
+
+Yoy can get the latest from Github or Mods.Factorio.com
+
+- Get the Zip file from Releases
+
+- Get the Mod file from []()
+
+- Get the Mod from the in-game Mod Downloader [/imagesForReadme/in_game_launcher.PNG]
+
+
 ## Current Items
 
 1. Squid Plates - a plate used to craft other items in this mod
