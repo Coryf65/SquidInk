@@ -8,7 +8,7 @@ Made for fun to use with my friends.
 
 Yoy can get the latest from Github or Mods.Factorio.com
 
-- Get the Zip file from Releases (here)[https://github.com/Coryf65/SquidInk/releases]
+- Get the Zip file from Releases [here](https://github.com/Coryf65/SquidInk/releases)
 
 - Get the Mod file from [Factorio Mod website](https://mods.factorio.com/mod/SquidInk)
 
