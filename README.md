@@ -1,4 +1,4 @@
-# SquidInk_1.0.1
+# SquidInk
 
 A Mod for Factorio
 
