@@ -16,10 +16,12 @@ Made for fun to use with my friends. A Furnace, and a Centrifuge
 [Factorio Modding Guide](https://wiki.factorio.com/Modding)
 
 - Other Modders for examples
-[ReikaKalseki's Fast Furnaces](https://github.com/ReikaKalseki/FastFurnaces)
+[ReikaKalseki's Fast Furnaces](https://github.com/ReikaKalseki/FastFurnaces) -> which SquidFurnace is based on
+[Tone's More_Floors](https://mods.factorio.com/mod/More_Floors) -> Which InkedFloors is based on the tar
 
 - Base Game for examples, in your game install
 `C:\Program Files (x86)\Steam\steamapps\common\Factorio\data\base`
+
 
 
 ## The Plan
