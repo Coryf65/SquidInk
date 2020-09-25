@@ -6,7 +6,7 @@ Made for fun to use with my friends.
 
 ## How To Use
 
-Yoy can get the latest from Github or Mods.Factorio.com
+You can get the latest from Github or Mods.Factorio.com
 
 - Get the Zip file from Releases [here](https://github.com/Coryf65/SquidInk/releases)
 
@@ -15,6 +15,11 @@ Yoy can get the latest from Github or Mods.Factorio.com
 - Get the Mod from the in-game Mod Downloader 
 
 ![in game mod launcher](/imagesForReadme/in_game_launcher.PNG)
+
+- Creating Custom Models [Factorio Forums](https://forums.factorio.com/viewtopic.php?f=34&t=5336)
+
+- Sprite Sheeet Script by FreezingMoon [github link](https://github.com/FreezingMoon/Spritify)
+    [Raw Code link](https://raw.githubusercontent.com/Fweeb/blender_spritify/master/spritify.py)
 
 
 ## Current Items
@@ -34,6 +39,8 @@ Yoy can get the latest from Github or Mods.Factorio.com
 2. Squid Squeezer - Collects Squid Ink from fish Used to replace Oil
 
 3. Mark 2 Suid Furnace - more energy effcient
+
+4. Create custom models using Blender
 
 ## Current Research Path Plans
 
