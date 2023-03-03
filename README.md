@@ -2,7 +2,7 @@
 
 A Mod for Factorio
 
-Made for fun to use with my friends.
+Adds a Faster Electric Furnace, a Faster Centrifuge and some defensive inked floors to slow enemies.
 
 ## How To Use
 
