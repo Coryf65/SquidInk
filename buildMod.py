@@ -33,7 +33,7 @@ def get_mod_version():
     print("Mod Version:", info_file_data["version"])
     return info_file_data["version"]
 
-# Zip the folder /SquiInk_
+# Zip the folder /SquidInk_
 def compress_folder(folder, version, display_zipping = False):
     """
     Compress / Zip a folder and add the current Mod Version to the end. ie: "SquidInk_1.1.2.zip"
@@ -46,15 +46,11 @@ def compress_folder(folder, version, display_zipping = False):
     Returns:
         (string): Name of the file that we compressed
     """
-    file2 = "SquidInk_" + version # zip file name
-    file = "SquidInk_" # zip file name
+    file = "SquidInk_" + version # zip file name
     directory = folder
-    base_folder = Path(file, file2)
 
-    print(GREEN, file2, WHITE)
     print(GREEN, file, WHITE)
     print(GREEN, str(directory), WHITE)
-    print(GREEN, str(base_folder), WHITE)
     
     #make_archive(file, "zip", directory)  # zipping the directory
     with ZipFile(file + ".zip", mode="w") as archive:
@@ -86,8 +82,11 @@ def make_folder(folder_name, path):
     os.mkdir(folder, 0o775)
 
 def copy_folder(folder_to_copy, destination):
-    print(YELLOW ,"Copying", folder_to_copy, "into", destination, WHITE) 
-    shutil.move(folder_to_copy, destination)
+    print(YELLOW ,"Copying", folder_to_copy, "into", destination, WHITE)
+    if destination.exists():
+        print(RED, "☒ folder exists removing now", WHITE)
+        shutil.rmtree(destination)
+    shutil.copytree(folder_to_copy, destination)
 
 def move_file(file, destination):
     """
@@ -108,12 +107,9 @@ def move_file(file, destination):
 
 # Defining main function
 def main():
-    
-    print("Building Squid Ink Release, This simple script is to zip the mod folder and deploy to facotrio")
+    print("Building Squid Ink Release, This simple script is to zip the mod folder and deploy to facotrio")  
     
     mod_version = get_mod_version()
-    
-    # ask if we need to set the version?
 
     # make a new folder with the version
     make_folder("SquidInk_", RELEASE_PATH)
@@ -122,11 +118,15 @@ def main():
     copy_folder(Path(BASE_DIR / "SquidInk_"), Path(RELEASE_PATH / "SquidInk_"))
 
     # then zip
-    #zipped_name = compress_folder(Path(BASE_DIR / "SquidInk_"), mod_version, True)
+    zipped_name = compress_folder(Path(RELEASE_PATH / "SquidInk_"), mod_version, True)
     
     # check to update factorio mods folder
-    #move_file(zipped_name, RELEASE_PATH)
+    move_file(zipped_name, RELEASE_PATH)
 
+    # remove folder
+    folder = Path(RELEASE_PATH / "SquidInk_")
+    if folder.exists():
+        shutil.rmtree(folder)
 
 if __name__=="__main__":
     main()
