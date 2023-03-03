@@ -2,14 +2,20 @@ import json
 import os
 from pathlib import Path
 from zipfile import ZipFile
-from shutil import make_archive
 import shutil
 # This simple script is to zip the mod folder
-# may also update to the mod portal
 
 BASE_DIR = Path(__file__).absolute().parent
 RELEASE_PATH = Path(BASE_DIR / "Releases")
 INFO_FILE = Path(BASE_DIR / "SquidInk_/" / "info.json")
+# colors for the terminal (https://en.wikipedia.org/wiki/ANSI_escape_code#Colors)
+WHITE  = '\033[0m'
+RED  = '\033[31m'
+YELLOW  = '\033[93m'
+GREEN  = '\033[32m'
+ORANGE  = '\033[33m'
+BLUE  = '\033[34m'
+PURPLE  = '\033[35m'
 
 # get version number from /SquidInk_/prototypes/info.json - "factorio_version": "1.1", and set in release name xip file
 def get_mod_version():
@@ -38,14 +44,42 @@ def compress_folder(folder, version, display_zipping = False):
     Returns:
         (string): Name of the file that we compressed
     """
-    file = "SquidInk_" + version # zip file name
+    file2 = "SquidInk_" + version # zip file name
+    file = "SquidInk_" # zip file name
     directory = folder
-    make_archive(file, "zip", directory)  # zipping the directory
-    
+    base_folder = Path(file, file2)
+
+    print(GREEN, file2, WHITE)
+    print(GREEN, file, WHITE)
+    print(GREEN, str(directory), WHITE)
+    print(GREEN, str(base_folder), WHITE)
+
+    #make a new folder with the version
+    if file2.exists():
+        print(RED, "☒ a file exists removing now", WHITE)
+        os.remove(file2)
+    os.mkdir(file2, 777)
+
+    # copy all contents into it
+    print(YELLOW ,"Copying", directory, "into", file2, WHITE) 
+    shutil.copy(directory, file2)
+
+    # then zip
+
+    #make_archive(file, "zip", directory)  # zipping the directory
+    with ZipFile(file + ".zip", mode="w") as archive:
+        for file_path in directory.rglob("*"):
+            archive.write(
+                file_path,
+                arcname=file_path.relative_to(directory)
+            )
+
     if display_zipping:
         print("Contents of the zip file:\n")
         with ZipFile(file + ".zip", 'r') as zip:
             zip.printdir()
+
+    print("\n")
     return file + ".zip" # filename compressed
     
 def move_file(file, destination):
@@ -60,16 +94,20 @@ def move_file(file, destination):
     old_file = Path(destination / file)
     
     if old_file.exists():
-        print("☒ a file exists removing now...")
+        print("☒ a file exists removing now")
         os.remove(old_file)
 
-    shutil.move(file, destination, True)
+    shutil.move(file, destination)
 
 # Defining main function
 def main():
-    print("Building Squid Ink Release ...")
+    print("Building Squid Ink Release ")
     mod_version = get_mod_version()
+    
+    # maybe make folder move all into then zip?
+
     zipped_name = compress_folder(Path(BASE_DIR / "SquidInk_"), mod_version, True)
+    
     move_file(zipped_name, RELEASE_PATH)
   
 # Using the special variable 
