@@ -19,7 +19,7 @@ def get_mod_version():
     Returns:
         (string): Version of the current mod listed from the info.json file ie: "1.0.3"
     """
-    print("info.json file:", INFO_FILE)
+    print("☑ found info.json file:", INFO_FILE)
     with open(INFO_FILE.absolute(), 'r+') as info_file:
         info_file_data = json.load(info_file)
     print("Mod Version:", info_file_data["version"])
@@ -43,7 +43,7 @@ def compress_folder(folder, version, display_zipping = False):
     make_archive(file, "zip", directory)  # zipping the directory
     
     if display_zipping:
-        print("Contents of the zip file:")
+        print("Contents of the zip file:\n")
         with ZipFile(file + ".zip", 'r') as zip:
             zip.printdir()
     return file + ".zip" # filename compressed
@@ -58,8 +58,9 @@ def move_file(file, destination):
     """
     print("Moving", file, "into", destination)
     old_file = Path(destination / file)
+    
     if old_file.exists():
-        # need to remove
+        print("☒ a file exists removing now...")
         os.remove(old_file)
 
     shutil.move(file, destination, True)
@@ -68,7 +69,7 @@ def move_file(file, destination):
 def main():
     print("Building Squid Ink Release ...")
     mod_version = get_mod_version()
-    zipped_name = compress_folder(Path(BASE_DIR / "SquidInk_"), mod_version)
+    zipped_name = compress_folder(Path(BASE_DIR / "SquidInk_"), mod_version, True)
     move_file(zipped_name, RELEASE_PATH)
   
 # Using the special variable 
