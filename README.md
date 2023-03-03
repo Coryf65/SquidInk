@@ -49,6 +49,9 @@ Yoy can get the latest from Github or Mods.Factorio.com
 
   - Fish squeezer to make oil "squid ink" - WIP
 
+## Dev Notes
+
+- `buildMod.py` will compress the current mod into a folder ready to upload into Factorio Mods and GitHub.
 
 ### Some helpful Docs for others
 
