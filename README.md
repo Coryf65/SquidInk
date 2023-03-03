@@ -78,11 +78,15 @@ Yoy can get the latest from Github or Mods.Factorio.com
 - Console Commands
 [Factorio Console Commands](https://wiki.factorio.com/Console)
 
+- Data Names (useful for cheating items when testing)
+[Factorio Item Names](https://wiki.factorio.com/Data.raw)
+
 - API Documentation
 [Factorio API](https://lua-api.factorio.com/latest/)
 
 - Modding Guide / Tutorials
 [Factorio Modding Guide](https://wiki.factorio.com/Modding)
+Great [post](https://forums.factorio.com/viewtopic.php?t=12564) about modding on the Forums by [engineer13](https://forums.factorio.com/memberlist.php?mode=viewprofile&u=7441)
 
 - Other Modders for examples
   - [ReikaKalseki's Fast Furnaces](https://github.com/ReikaKalseki/FastFurnaces) -> which SquidFurnace is based on
