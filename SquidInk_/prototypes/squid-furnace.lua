@@ -51,13 +51,10 @@ squidFurnace.animation.layers =
   }
 }
 
-
-
 -- Add into game
 data:extend({
 
   squidFurnace,
-
   {
     type = "item",
     name = "squid-furnace",
@@ -69,7 +66,6 @@ data:extend({
     place_result = "squid-furnace",
     stack_size = 50
   },
-
   {
     type = "recipe",
     name = "squid-furnace",
@@ -82,5 +78,4 @@ data:extend({
     energy_required = 5,
     enabled = false
   },
-
 })

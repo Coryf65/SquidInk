@@ -1,7 +1,6 @@
 -- Squid Plates
 
 data:extend({
-
   {
     type = "item",
     name = "squid-plate",
@@ -12,7 +11,6 @@ data:extend({
     order = "a",
     stack_size = 200
   },
-
   {
     type = "recipe",
     name = "squid-plate",
@@ -32,5 +30,4 @@ data:extend({
     group = "squid-ink",
     --subgroup = "fluid-recipes"
   },
-
 })
