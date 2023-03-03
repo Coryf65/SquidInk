@@ -19,26 +19,35 @@ Yoy can get the latest from Github or Mods.Factorio.com
 
 ## Current Items
 
-1. Squid Plates - a plate used to craft other items in this mod
+1. Squid Plates (*a plate used to craft other items in this mod*)
 
-2. Squid Furnace - 5x Faster electric furnace with 6 module slots
+2. Squid Furnace (*an upgraded electric furnace*)
+  - :heavy_check_mark: `8x` faster electric furnace 
+  - :heavy_check_mark: `6` module slots : `2` more than the base one
+  - :heavy_check_mark: more health : `400hp`
+  - :heavy_minus_sign: more power draw : `250kW`
 
-3. Inked Floor - Slows Enemies
+3. Inked Floor (*a floor tile that slows enemies*)
 
-4. Squid Centrifuge - 5x Faster Centrifuge
+4. Squid Centrifuge (*an upgraded centrifuge*)
+
+  - :heavy_check_mark: `8x` Faster Centrifuge
+  - :heavy_check_mark: more health `550hp`
+  - :heavy_minus_sign: more power draw : `600kW`
 
 ## Planned Items
 
-1. Uranium Recipe - Creates Uranium 235 from 238 and Squid Ink
+1. Uranium Recipe : *Creates Uranium 235 from 238 and Squid Ink*
 
-2. Squid Squeezer - Collects Squid Ink from fish Used to replace Oil
+2. Squid Squeezer : *Collects Squid Ink from fish Used to replace Oil*
 
-3. Mark 2 Suid Furnace - more energy effcient
+3. Mark 2 Suid Furnace : *more energy effecient and more speed*
+
+4. A pump that filters out "Squid" from the water. This would replace the fish with the new squid item *needs to be easy and a early recipe*
 
 ## Current Research Path Plans
 
 1. Squid Tech
-
   - Base items = Squid-Plates, Squid-Furnace, Squid-Centrifuge
 
 2. Squid Cooking - WIP
@@ -68,8 +77,14 @@ Yoy can get the latest from Github or Mods.Factorio.com
   - [ReikaKalseki's Fast Furnaces](https://github.com/ReikaKalseki/FastFurnaces) -> which SquidFurnace is based on
   - [Tone's More_Floors](https://mods.factorio.com/mod/More_Floors) -> Which InkedFloors is based on the tar
 
-- Base Game for examples, in your game install
-`C:\Program Files (x86)\Steam\steamapps\common\Factorio\data\base`
+Base Game path for examples, in your game install
+
+  `C:\Program Files (x86)\Steam\steamapps\common\Factorio\data\base`
+
+Mods folder location 
+  > your PCs username in replace of mine
+
+`C:\Users\Cory\AppData\Roaming\Factorio\mods`
 
 #### Glossary
 

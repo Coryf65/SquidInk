@@ -9,7 +9,7 @@ data:extend({
         icon_size = 64, icon_mipmaps = 4,
         flags = {"placeable-neutral", "placeable-player", "player-creation"},
         minable = {mining_time = 0.1, result = "squid-centrifuge"},
-        max_health = 350,
+        max_health = 550,
         corpse = "centrifuge-remnants",
         dying_explosion = "centrifuge-explosion",
         resistances =
@@ -335,7 +335,7 @@ data:extend({
             --idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.3 },
         },
 
-        crafting_speed = 5,
+        crafting_speed = 8,
         crafting_categories = {"centrifuging"},
         energy_source =
         {
@@ -344,7 +344,7 @@ data:extend({
             emissions_per_minute = 4
         },
 
-        energy_usage = "400kW",
+        energy_usage = "600kW",
         module_specification =
         {
             module_slots = 4
