@@ -3,11 +3,13 @@ import os
 from pathlib import Path
 from zipfile import ZipFile
 import shutil
-# This simple script is to zip the mod folder
 
+# This simple script is to zip the mod folder
 BASE_DIR = Path(__file__).absolute().parent
 RELEASE_PATH = Path(BASE_DIR / "Releases")
+FACOTRIO_PATH = ""
 INFO_FILE = Path(BASE_DIR / "SquidInk_/" / "info.json")
+
 # colors for the terminal (https://en.wikipedia.org/wiki/ANSI_escape_code#Colors)
 WHITE  = '\033[0m'
 RED  = '\033[31m'
@@ -25,8 +27,8 @@ def get_mod_version():
     Returns:
         (string): Version of the current mod listed from the info.json file ie: "1.0.3"
     """
-    print("☑ found info.json file:", INFO_FILE)
     with open(INFO_FILE.absolute(), 'r+') as info_file:
+        print(GREEN, "☑ found info.json file:", INFO_FILE, WHITE)
         info_file_data = json.load(info_file)
     print("Mod Version:", info_file_data["version"])
     return info_file_data["version"]
@@ -53,19 +55,7 @@ def compress_folder(folder, version, display_zipping = False):
     print(GREEN, file, WHITE)
     print(GREEN, str(directory), WHITE)
     print(GREEN, str(base_folder), WHITE)
-
-    #make a new folder with the version
-    if file2.exists():
-        print(RED, "☒ a file exists removing now", WHITE)
-        os.remove(file2)
-    os.mkdir(file2, 777)
-
-    # copy all contents into it
-    print(YELLOW ,"Copying", directory, "into", file2, WHITE) 
-    shutil.copy(directory, file2)
-
-    # then zip
-
+    
     #make_archive(file, "zip", directory)  # zipping the directory
     with ZipFile(file + ".zip", mode="w") as archive:
         for file_path in directory.rglob("*"):
@@ -82,6 +72,23 @@ def compress_folder(folder, version, display_zipping = False):
     print("\n")
     return file + ".zip" # filename compressed
     
+def make_folder(folder_name, path):
+    """
+    Create a folder
+  
+    Parameters:
+        folder_name (string): Name for the folder / directory to be called
+        path (string): Path of where to place this folder ie: "/home/here/"
+    """
+    folder = Path(path / folder_name)
+    if folder.exists():
+        os.rmdir(folder)
+    os.mkdir(folder, 0o775)
+
+def copy_folder(folder_to_copy, destination):
+    print(YELLOW ,"Copying", folder_to_copy, "into", destination, WHITE) 
+    shutil.move(folder_to_copy, destination)
+
 def move_file(file, destination):
     """
     Moves a file or folder into a new destination.
@@ -101,16 +108,25 @@ def move_file(file, destination):
 
 # Defining main function
 def main():
-    print("Building Squid Ink Release ")
+    
+    print("Building Squid Ink Release, This simple script is to zip the mod folder and deploy to facotrio")
+    
     mod_version = get_mod_version()
     
-    # maybe make folder move all into then zip?
+    # ask if we need to set the version?
 
-    zipped_name = compress_folder(Path(BASE_DIR / "SquidInk_"), mod_version, True)
+    # make a new folder with the version
+    make_folder("SquidInk_", RELEASE_PATH)
+
+    # copy all contents into it
+    copy_folder(Path(BASE_DIR / "SquidInk_"), Path(RELEASE_PATH / "SquidInk_"))
+
+    # then zip
+    #zipped_name = compress_folder(Path(BASE_DIR / "SquidInk_"), mod_version, True)
     
-    move_file(zipped_name, RELEASE_PATH)
-  
-# Using the special variable 
-# __name__
+    # check to update factorio mods folder
+    #move_file(zipped_name, RELEASE_PATH)
+
+
 if __name__=="__main__":
     main()
