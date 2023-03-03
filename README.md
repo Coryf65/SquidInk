@@ -94,7 +94,7 @@ Great [post](https://forums.factorio.com/viewtopic.php?t=12564) about modding on
 
 Base Game path for examples, in your game install
 
-  `C:\Program Files (x86)\Steam\steamapps\common\Factorio\data\base`
+  `X:\Steam\steamapps\common\Factorio\data\base`
 
 Mods folder location 
   > your PCs username in replace of mine
