@@ -21,7 +21,12 @@ Yoy can get the latest from Github or Mods.Factorio.com
 
 1. Squid Plates (*a plate used to craft other items in this mod*)
 
+  ![Purple Squid Plates, an upgraded iron plate](SquidInk_/graphics/icons/squid-plate.png)
+
 2. Squid Furnace (*an upgraded electric furnace*)
+
+  ![A Purple Squid Furnace](imagesForReadme/squid-furnace.png)
+
   - :heavy_check_mark: `8x` faster electric furnace 
   - :heavy_check_mark: `6` module slots : `2` more than the base one
   - :heavy_check_mark: more health : `400hp`
@@ -29,8 +34,12 @@ Yoy can get the latest from Github or Mods.Factorio.com
 
 3. Inked Floor (*a floor tile that slows enemies*)
 
+  ![A inked floor that slows enemies](imagesForReadme/inked-floors.png)
+
 4. Squid Centrifuge (*an upgraded centrifuge*)
 
+  ![Alt text](imagesForReadme/squid-centrifuge.png)
+  
   - :heavy_check_mark: `8x` Faster Centrifuge
   - :heavy_check_mark: more health `550hp`
   - :heavy_minus_sign: more power draw : `600kW`
@@ -44,6 +53,8 @@ Yoy can get the latest from Github or Mods.Factorio.com
 3. Mark 2 Suid Furnace : *more energy effecient and more speed*
 
 4. A pump that filters out "Squid" from the water. This would replace the fish with the new squid item *needs to be easy and a early recipe*
+
+5. Maybe add a settings mod file for tweaking settings? (*need to figure out how to do this*)
 
 ## Current Research Path Plans
 
