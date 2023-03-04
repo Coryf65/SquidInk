@@ -7,7 +7,7 @@ import shutil
 # This simple script is to zip the mod folder
 BASE_DIR = Path(__file__).absolute().parent
 RELEASE_PATH = Path(BASE_DIR / "Releases")
-FACOTRIO_PATH = ""
+FACOTRIO_PATH = Path("C:/Users/Cory/AppData/Roaming/Factorio/mods")
 INFO_FILE = Path(BASE_DIR / "SquidInk_/" / "info.json")
 
 # colors for the terminal (https://en.wikipedia.org/wiki/ANSI_escape_code#Colors)
@@ -27,6 +27,7 @@ def get_mod_version():
     Returns:
         (string): Version of the current mod listed from the info.json file ie: "1.0.3"
     """
+    print("finding info file...")
     with open(INFO_FILE.absolute(), 'r+') as info_file:
         print(GREEN, "☑ found info.json file:", INFO_FILE, WHITE)
         info_file_data = json.load(info_file)
@@ -76,14 +77,16 @@ def make_folder(folder_name, path):
         folder_name (string): Name for the folder / directory to be called
         path (string): Path of where to place this folder ie: "/home/here/"
     """
+    print("creating staging folder: ", str(Path(path / folder_name)))
     folder = Path(path / folder_name)
     if folder.exists():
-        os.rmdir(folder)
+        shutil.rmtree(folder)
     os.mkdir(folder, 0o775)
 
-def copy_folder(folder_to_copy, destination):
+def copy_folder(folder_to_copy, destination, remove = True):
     print(YELLOW ,"Copying", folder_to_copy, "into", destination, WHITE)
-    if destination.exists():
+
+    if remove:
         print(RED, "☒ folder exists removing now", WHITE)
         shutil.rmtree(destination)
     shutil.copytree(folder_to_copy, destination)
@@ -100,25 +103,28 @@ def move_file(file, destination):
     old_file = Path(destination / file)
     
     if old_file.exists():
-        print("☒ a file exists removing now")
+        print(RED, "☒ a file exists removing now", WHITE)
         os.remove(old_file)
 
     shutil.move(file, destination)
 
 # Defining main function
 def main():
+    print(PURPLE + "==============================================================================================")
     print("Building Squid Ink Release, This simple script is to zip the mod folder and deploy to facotrio")  
+    print("==============================================================================================\n", WHITE)
     
+    see_tree = False    
     mod_version = get_mod_version()
 
     # make a new folder with the version
     make_folder("SquidInk_", RELEASE_PATH)
 
     # copy all contents into it
-    copy_folder(Path(BASE_DIR / "SquidInk_"), Path(RELEASE_PATH / "SquidInk_"))
+    copy_folder(Path(BASE_DIR / "SquidInk_"), Path(RELEASE_PATH / "SquidInk_"))    
 
     # then zip
-    zipped_name = compress_folder(Path(RELEASE_PATH / "SquidInk_"), mod_version, True)
+    zipped_name = compress_folder(Path(RELEASE_PATH / "SquidInk_"), mod_version, see_tree)
     
     # check to update factorio mods folder
     move_file(zipped_name, RELEASE_PATH)
@@ -127,6 +133,16 @@ def main():
     folder = Path(RELEASE_PATH / "SquidInk_")
     if folder.exists():
         shutil.rmtree(folder)
+
+    should_update = input("Would you like to update the Factorio Mods folder with this update?\n")
+
+    # update Factorio mods folder with new version
+    if should_update.lower() == "y" or should_update.lower() == "true":
+        print("Updating Factorio Mods Folder... ")
+        # NotADirectoryError: [WinError 267] The directory name is invalid: 'x:\\Code\\Github\\SquidInk\\Releases\\SquidInk_1.1.0.zip'
+        copy_folder(Path(RELEASE_PATH / zipped_name), FACOTRIO_PATH, False)
+
+    print(GREEN, "Succesfully Completed.", WHITE)
 
 if __name__=="__main__":
     main()
