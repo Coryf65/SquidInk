@@ -93,7 +93,7 @@ def copy_folder(folder_to_copy, destination, remove = True):
 
 def move_file(file, destination):
     """
-    Moves a file or folder into a new destination.
+    Moves a file into a new destination.
   
     Parameters:
         file (string): Path to the file/folder you want to move ie: "/somefolder/here"
@@ -107,6 +107,19 @@ def move_file(file, destination):
         os.remove(old_file)
 
     shutil.move(file, destination)
+
+def copy_file(file, destination):
+    """
+    Copies a file into a new destination.
+  
+    Parameters:
+        file (string): filename ie: modname_1.0.0.zip
+        destination (string): Path to the destination place where to place this file "/newplace"
+    """
+    print("Copying", file, "into", destination)
+    old_file = Path(destination / file)
+
+    shutil.copy(file, destination)
 
 # Defining main function
 def main():
@@ -140,7 +153,7 @@ def main():
     if should_update.lower() == "y" or should_update.lower() == "true":
         print("Updating Factorio Mods Folder... ")
         # NotADirectoryError: [WinError 267] The directory name is invalid: 'x:\\Code\\Github\\SquidInk\\Releases\\SquidInk_1.1.0.zip'
-        copy_folder(Path(RELEASE_PATH / zipped_name), FACOTRIO_PATH, False)
+        copy_file(Path(RELEASE_PATH / zipped_name), FACOTRIO_PATH)
 
     print(GREEN, "Succesfully Completed.", WHITE)
 
