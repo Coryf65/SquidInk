@@ -120,23 +120,12 @@ def main():
     
     see_tree = False    
     mod_version = get_mod_version()
-
-    # make a new folder with the version
-    #make_folder("SquidInk_", RELEASE_PATH)
-
-    # copy all contents into it
-    #copy_folder(Path(BASE_DIR / "SquidInk_"), Path(RELEASE_PATH / "SquidInk_"))    
-
+    
     # then zip
     zipped_name = compress_folder("SquidInk_", mod_version, see_tree)
     
     # check to update factorio mods folder
     move_file(zipped_name, RELEASE_PATH)
-
-    # remove folder
-    # folder = Path(RELEASE_PATH / "SquidInk_")
-    # if folder.exists():
-    #     shutil.rmtree(folder)
 
     #should_update = input("Would you like to update the Factorio Mods folder with this update?\n")
     should_update = "y"
