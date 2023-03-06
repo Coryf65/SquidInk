@@ -1,9 +1,4 @@
 -- Inked Floor
-
--- Cory testing how to print into game console
-local first_player = game.get_player(1)
-first_player.print(first_player.name)
-
 data:extend({
 {
 	type = "tile",

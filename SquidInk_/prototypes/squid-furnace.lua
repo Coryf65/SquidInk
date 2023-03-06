@@ -1,5 +1,4 @@
 -- Squid Furnace
-
 squidFurnace = util.table.deepcopy(data.raw["furnace"]["electric-furnace"])
 squidFurnace.name = "squid-furnace"
 squidFurnace.icon = "__SquidInk__/graphics/icons/squid-furnace-icon.png"
