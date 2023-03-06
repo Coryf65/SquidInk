@@ -86,6 +86,7 @@ Yoy can get the latest from Github or Mods.Factorio.com
 
 - Modding Guide / Tutorials
 [Factorio Modding Guide](https://wiki.factorio.com/Modding)
+[Gangsir's Modding Tutorial](https://wiki.factorio.com/Tutorial:Modding_tutorial/Gangsir)
 Great [post](https://forums.factorio.com/viewtopic.php?t=12564) about modding on the Forums by [engineer13](https://forums.factorio.com/memberlist.php?mode=viewprofile&u=7441)
 
 - Other Modders for examples
