@@ -1,7 +1,7 @@
 ---
 name: Bug report
 about: Create a report to help us improve
-title: ''
+title: "[BUG] some issue"
 labels: bug
 assignees: Coryf65
 
@@ -24,7 +24,10 @@ A clear and concise description of what you expected to happen.
 If applicable, add screenshots to help explain your problem.
 
 **Factorio Version**
+1.1.76
 
+**Mod Version**
+1.0.2
 
 **Additional context**
 Add any other context about the problem here.
