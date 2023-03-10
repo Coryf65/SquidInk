@@ -1,7 +1,7 @@
 ---
 name: Bug report
 about: Create a report to help us improve
-title: "[BUG] some issue"
+title: ":bug: some issue"
 labels: bug
 assignees: Coryf65
 
